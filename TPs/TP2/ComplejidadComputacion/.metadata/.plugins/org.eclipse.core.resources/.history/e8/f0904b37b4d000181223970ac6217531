@@ -1,0 +1,19 @@
+package edu.unlam.prograAvanzada.TP3;
+
+public class Polinomio {
+
+	private int grado;
+	private double[] coeficiente;
+	public Polinomio(int grado, double[] coeficiente) {
+		this.grado = grado;
+		this.coeficiente = coeficiente;
+	}
+	
+	public long PotenciaMSucesivas(long x, int n) {
+		long resultado = 1;
+		for(int i = 0; i < n; i++) {
+			resultado = resultado*x;
+		}
+		return resultado;
+	}
+}

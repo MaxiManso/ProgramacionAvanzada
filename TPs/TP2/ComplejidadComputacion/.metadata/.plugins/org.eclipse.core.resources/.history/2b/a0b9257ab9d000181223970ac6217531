@@ -1,0 +1,32 @@
+package edu.unlam.prograAvanzada.TP3;
+
+
+import static org.junit.Assert.assertEquals;
+
+import org.junit.Assert;
+import org.junit.Test;
+
+public class PolinomioTest {
+
+	@Test
+	public void calculoPotenciaMultipicacionesSucesivasNumerosEnterosPositivo() {
+		Polinomio pol = new Polinomio(1, new double[1]);
+		System.out.print(pol.PotenciaMSucesivas(2, 5));
+		assertEquals(32.0 , pol.PotenciaMSucesivas(2, 5));
+	}
+	
+	@Test
+	public void calcularPotenciaMultiplicacionesSucesivasNumerosEnterosNegativos() {
+		Polinomio pol = new Polinomio(1, new double[1]);
+		assertEquals(32.0 , pol.PotenciaMSucesivas(-2.0, 5));
+	}
+	
+	@Test
+	public void calcularPotenciaMultipicacionesSucesivasNumerosReales() {
+		Polinomio pol = new Polinomio(1, new double[1]);
+		System.out.print(pol.PotenciaMSucesivas(2.1, 5));
+		assertEquals(40.841000000001, pol.PotenciaMSucesivas(2.1 , 5),1);
+	}
+	
+
+}
